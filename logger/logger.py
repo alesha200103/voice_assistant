@@ -1,6 +1,6 @@
 import logging
-from logging import Logger
 import sys
+from logging import Logger
 
 
 def get_logger(name: str) -> Logger:

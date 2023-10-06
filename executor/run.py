@@ -1,3 +1,4 @@
+import typer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import LinearSVC
@@ -8,6 +9,8 @@ from intents import (Actions, IntentController, IntentControllerSettings,
                      IntentsFunctions, IntentsFunctionsSettings)
 from rugpt3 import GPT3Controller, GPT3ControllerSettings
 from tts import TTS, TTSSettings
+
+helper_app = typer.Typer()
 
 
 def get_tts() -> TTS:
@@ -43,6 +46,7 @@ def get_helper() -> Helper:
     return Helper(recognizer=rec, microphone=mic, settings=helper_settings)
 
 
+@helper_app.command()
 def run():
     #  TTS
     tts = get_tts()
@@ -114,4 +118,4 @@ def talk_with_bot(
 
 
 if __name__ == "__main__":
-    run()
+    helper_app()

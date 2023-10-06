@@ -1,6 +1,7 @@
 CODE = executor\
        helper\
        intents\
+       logger\
        rugpt3\
        tts
 
@@ -20,3 +21,6 @@ lint:
 	$(VENV)/bin/python -m black $(CODE)
 	$(VENV)/bin/python -m isort $(CODE)
 	$(VENV)/bin/python -m pylint disable=missing-module-docstring $(CODE)
+
+start:
+	$(VENV)/bin/python -m /voice_assistant/executor/run
