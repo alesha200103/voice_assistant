@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "myhelper"
+version = "0.1.0"
+description = ""
+authors = ["a.i.merzlyakov"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+black = "^23.7.0"
+speechrecognition = "^3.10.0"
+pyaudio = "^0.2.13"
+pydantic = "^2.2.1"
+pydantic-settings = "^2.0.3"
+isort = "^5.12.0"
+transformers = "^4.31.0"
+wheel = "^0.41.1"
+torch = "^2.0.1"
+torchvision = "^0.15.2"
+pyobjc = "^9.2"
+pyttsx3 = "^2.90"
+pydub = "^0.25.1"
+ffmpeg = "^1.4"
+ffprobe = "^0.5"
+scikit-learn = "^1.3.0"
+soundfile = "^0.12.1"
+mypy = "^1.5.1"
+pylint = "^3.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
